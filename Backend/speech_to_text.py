@@ -13,11 +13,11 @@ model = WhisperModel(
 
 def transcribe_audio(audio_path):
 
-    segments, info = model.transcribe(audio_path)
+    segments, _ = model.transcribe(audio_path)
 
-    transcript = ""
+    transcript = " ".join(
+        segment.text.strip()
+        for segment in segments
+    )
 
-    for segment in segments:
-        transcript += segment.text + " "
-
-    return transcript.strip()
+    return transcript

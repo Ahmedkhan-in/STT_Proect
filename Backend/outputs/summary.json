@@ -1,13 +1,24 @@
 {
-    "name": "Amir",
-    "phone_number": null,
-    "email": null,
-    "address": null,
-    "company": "Google",
-    "organization": null,
-    "participants": [],
-    "topic": "artificial intelligence",
-    "intent": "provide background information",
-    "summary": "Amir is a bachelors student in artificial intelligence and the founder of Google, which helps people with visa and immigration processes.",
-    "additional_information": null
+    "conversation_type": "Customer Service",
+    "summary": "Customer reported a stolen David card and requested it be stopped.",
+    "entities": {
+        "people": [
+            {
+                "name": "Ahmad"
+            }
+        ],
+        "organizations": [],
+        "skills": []
+    },
+    "events": [
+        {
+            "event": "Card reported stolen"
+        }
+    ],
+    "actions": [
+        "Stop card"
+    ],
+    "metadata": {
+        "language": "English"
+    }
 }

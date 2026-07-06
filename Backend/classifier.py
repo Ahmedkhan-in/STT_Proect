@@ -1,16 +1,30 @@
+import json
+
 from llm import llm
 
-from parser import parser
+from prompts.prompt_templates import prompt
 
-from prompt_templates import extract_prompt
+from prompts.instructions import SYSTEM_INSTRUCTIONS
 
-chain = extract_prompt | llm | parser
+from prompts.examples import get_example
+
+chain = prompt | llm
 
 
 def classify(transcript):
 
-    return chain.invoke(
+    response = chain.invoke(
         {
-            "transcript": transcript
+            "instructions": SYSTEM_INSTRUCTIONS,
+            "example": get_example(),
+            "transcript": transcript,
         }
     )
+
+    content = response.content.strip()
+
+    if content.startswith("```json"):
+        content = content.replace("```json", "")
+        content = content.replace("```", "").strip()
+
+    return json.loads(content)
