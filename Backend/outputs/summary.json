@@ -1,0 +1,13 @@
+{
+    "name": "Amir",
+    "phone_number": null,
+    "email": null,
+    "address": null,
+    "company": "Google",
+    "organization": null,
+    "participants": [],
+    "topic": "artificial intelligence",
+    "intent": "provide background information",
+    "summary": "Amir is a bachelors student in artificial intelligence and the founder of Google, which helps people with visa and immigration processes.",
+    "additional_information": null
+}

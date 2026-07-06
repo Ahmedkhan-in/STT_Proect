@@ -1,0 +1,4 @@
+faster-whisper
+langchain
+langchain-ollama
+pydantic
