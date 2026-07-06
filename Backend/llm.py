@@ -1,8 +1,9 @@
 from langchain_ollama import ChatOllama
 
-from config import OLLAMA_MODEL, TEMPERATURE
+from config import OLLAMA_MODEL
+from config import TEMPERATURE
 
 llm = ChatOllama(
     model=OLLAMA_MODEL,
-    temperature=TEMPERATURE,
+    temperature=TEMPERATURE
 )

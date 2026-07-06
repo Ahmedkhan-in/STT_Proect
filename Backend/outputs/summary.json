@@ -1,24 +1,20 @@
 {
     "conversation_type": "Customer Service",
-    "summary": "Customer reported a stolen David card and requested it be stopped.",
+    "summary": "A customer, Ahmad, reported a stolen David card and requested it be stopped.",
     "entities": {
         "people": [
             {
                 "name": "Ahmad"
             }
         ],
-        "organizations": [],
-        "skills": []
+        "card_types": [
+            "David Card"
+        ]
     },
-    "events": [
-        {
-            "event": "Card reported stolen"
-        }
-    ],
+    "events": [],
     "actions": [
-        "Stop card"
+        "report",
+        "stop"
     ],
-    "metadata": {
-        "language": "English"
-    }
+    "metadata": {}
 }
